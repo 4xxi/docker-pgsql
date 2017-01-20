@@ -1,4 +1,4 @@
-FROM 4xxi/php7.1-fpm
+FROM 4xxi/php
 
 RUN apt-get update && apt-get install -y \
     libpq-dev
