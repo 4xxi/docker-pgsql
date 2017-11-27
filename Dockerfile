@@ -1,8 +1,7 @@
-FROM 4xxi/php
+FROM 4xxi/php:flex
 
-RUN set -ex \
-  && apk --no-cache add \
-    postgresql-dev
+RUN apt-get update && apt-get install -y \
+    libpq-dev
 
-# install pgsql ext
-RUN docker-php-ext-install pdo pdo_pgsql
+RUN docker-php-ext-install \
+    pdo_pgsql
