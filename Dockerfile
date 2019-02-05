@@ -1,4 +1,4 @@
-FROM 4xxi/php
+FROM 4xxi/php:7.2.2-fpm-alpine3.7
 
 RUN set -ex \
   && apk --no-cache add \
